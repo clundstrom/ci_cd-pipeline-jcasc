@@ -9,6 +9,8 @@ This project could serve as a template setup for your own pipeline.
 > All you need is docker.
 
 ## Example
+This example (specified in the Jenkinsfile) will build a unit test image from the Dockerfile.test file and use it to spin up a testrunner. The testrunner will install all necessary dependencies, run the tests and save the results. The jenkins master will then copy the results from the container, remove the container and display the test results.
+
 Jenkins running in docker.  
 <img src="images/containers.png">  
 A commit triggers the pipeline.  
