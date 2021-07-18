@@ -1,0 +1,10 @@
+__pycache__
+.__pycache__
+.pytest_cache
+.vscode
+venv
+
+**/__pycache__
+report
+.env
+.groovylintrc.json

@@ -1,0 +1,13 @@
+FROM python:3.8-slim-buster as unit-tests
+
+WORKDIR /app
+
+COPY requirements.txt requirements.txt
+RUN pip3 install -r requirements.txt
+
+COPY src/. /app/src
+COPY unit_tests/. /app/unit_tests
+
+ENV PYTHONPATH="${PYTHONPATH}:/app"
+
+CMD ["pytest", "--junitxml=reports/result.xml"]
